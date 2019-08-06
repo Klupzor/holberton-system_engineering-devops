@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu machine to respect above requirementsdd
+
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Holberton School for the win!" | sudo tee /var/www/html/index.nginx-debian.html
