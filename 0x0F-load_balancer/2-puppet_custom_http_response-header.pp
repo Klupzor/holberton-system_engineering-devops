@@ -11,7 +11,7 @@ exec { 'update':
   path   => '/etc/nginx/sites-available/default',
   line   => "	location / {
   	add_header X-Served-By ${hostname};",
-  match  => '^/tlocation / {',
+  match  => '^\tlocation / {',
 }
 -> exec { 'restart service nginx':
   command  => 'sudo service nginx restart',
