@@ -39,4 +39,4 @@ if __name__ == "__main__":
             print("No result")
     print("Employee {} is done with tasks({}/{}):".format(name, cont, tot))
     for done in list_tasks:
-        print("\t{}".format(done))
+        print("\t {}".format(done))
