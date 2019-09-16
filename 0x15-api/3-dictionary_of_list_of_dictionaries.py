@@ -2,7 +2,6 @@
 """Export to JSON"""
 import json
 import requests
-import sys
 
 if __name__ == "__main__":
     request = "https://jsonplaceholder.typicode.com/users"
