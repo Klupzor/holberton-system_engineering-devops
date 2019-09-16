@@ -16,7 +16,7 @@ if __name__ == "__main__":
         print("Not a valid JSON")
     else:
         if jsn:
-            name = jsn.get('name')
+            name = jsn.get('username')
         else:
             print("No result")
     task = "https://jsonplaceholder.typicode.com/todos?userId={}".format(uId)
