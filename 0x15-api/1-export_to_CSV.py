@@ -34,7 +34,7 @@ if __name__ == "__main__":
             tot = len(jsn)
             for tasks in jsn:
                 list_tasks.append(tasks["title"])
-                status.append(tasks["completed"])
+                status.append(str(tasks["completed"]))
         else:
             print("No result")
     fileName = "{}.csv".format(uId)
