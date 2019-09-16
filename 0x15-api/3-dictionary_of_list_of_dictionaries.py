@@ -23,8 +23,8 @@ if __name__ == "__main__":
         for task in tasks:
             if task.get("userId") == user_id:
                 values.append({"task": task.get("title"),
-                    "completed": task.get("completed"),
-                    "username": user.get("username")})
+                               "completed": task.get("completed"),
+                               "username": user.get("username")})
         to_dict = {user_id: values}
 
     fileName = "todo_all_employees.json"
