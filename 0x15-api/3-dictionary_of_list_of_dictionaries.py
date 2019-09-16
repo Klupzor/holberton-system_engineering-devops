@@ -30,4 +30,3 @@ if __name__ == "__main__":
     fileName = "todo_all_employees.json"
     with open(fileName, 'w') as employee_file:
         json.dump(to_dict, employee_file)
-
