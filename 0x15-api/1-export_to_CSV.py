@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Export to CSV"""
 import requests
-import sys, csv
+import sys
+import csv
 
 if __name__ == "__main__":
     if len(sys.argv) is not 2:
@@ -38,6 +39,10 @@ if __name__ == "__main__":
             print("No result")
     fileName = "{}.csv".format(uId)
     with open(fileName, mode='w') as employee_file:
-        employee_writer = csv.writer(employee_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
+        employee_writer = csv.writer(
+            employee_file,
+            delimiter=',',
+            quotechar='"',
+            quoting=csv.QUOTE_NONNUMERIC)
         for done, stat in zip(list_tasks, status):
-             employee_writer.writerow([uId, name, stat, done])
+            employee_writer.writerow([uId, name, stat, done])
