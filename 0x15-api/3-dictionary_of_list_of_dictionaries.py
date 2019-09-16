@@ -16,9 +16,9 @@ if __name__ == "__main__":
         tasks = response.json()
     except BaseException:
         print("Not a valid JSON")
-    values = []
     to_dict = {}
     for user in users:
+        values = []
         user_id = user.get("id")
         for task in tasks:
             if task.get("userId") == user_id:
@@ -30,3 +30,4 @@ if __name__ == "__main__":
     fileName = "todo_all_employees.json"
     with open(fileName, 'w') as employee_file:
         json.dump(to_dict, employee_file)
+
