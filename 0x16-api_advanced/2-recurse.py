@@ -4,7 +4,7 @@ import requests
 import sys
 
 
-def recurse(subreddit, after=None, hot_list=[]):
+def recurse(subreddit, hot_list=[], after=None):
     """Gather data from an reddit API"""
     base_url = "https://www.reddit.com"
     url = base_url + "/r/{}/hot.json".format(subreddit)
@@ -25,5 +25,5 @@ def recurse(subreddit, after=None, hot_list=[]):
     after = jsn.get("data").get("after")
     if after is None:
         return (None)
-    recurse(subreddit, after)
+    recurse(subreddit, hot_list, after)
     return (hot_list)
