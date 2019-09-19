@@ -8,7 +8,7 @@ def recurse(subreddit, hot_list=[], after=None):
     """Gather data from an reddit API"""
     base_url = "https://www.reddit.com"
     url = base_url + "/r/{}/hot.json".format(subreddit)
-    headers = {'user-agent': 'Andres'}
+    headers = {'User-Agent': 'Andres'}
     params = {'limit': 100, 'after': after}
     response = requests.get(
         url,
