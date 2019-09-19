@@ -3,6 +3,7 @@
 import requests
 import sys
 
+
 def number_of_subscribers(subreddit):
     base_url = "https://www.reddit.com"
     url = base_url + "/r/{}/about.json".format(subreddit)
