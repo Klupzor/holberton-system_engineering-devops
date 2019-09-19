@@ -10,6 +10,8 @@ def number_of_subscribers(subreddit):
     url = base_url + "/r/{}/about.json".format(subreddit)
     headers = {'user-agent': 'Andres'}
     response = requests.get(url, headers=headers)
+    if response.status_code is not 200:
+        return (0)
     try:
         jsn = response.json()
     except BaseException:
