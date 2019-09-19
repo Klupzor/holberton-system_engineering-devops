@@ -11,6 +11,7 @@ def top_ten(subreddit):
     headers = {'user-agent': 'Andres'}
     response = requests.get(url, headers=headers)
     if response.status_code is not 200:
+        print(None)
         return (0)
     try:
         jsn = response.json()
