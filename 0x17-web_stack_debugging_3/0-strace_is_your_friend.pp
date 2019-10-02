@@ -1,3 +1,4 @@
+# Fix file extension
 exec { 'fix-file':
   path     => '/usr/bin:/usr/sbin:/bin',
   provider => shell,
